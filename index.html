@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aisha's Wonderful World of 100</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --purple: #8A2BE2;
+            --pink: #FF69B4;
+            --light-pink: #FFB6C1;
+            --lilac: #D8BFD8;
+            --white: #FFF5FF;
+            --dark-purple: #4B0082;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: var(--dark-purple);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(150, 120, 220, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            animation: bounce 2s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        nav {
+            background-color: var(--lilac);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: var(--dark-purple);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        nav a:hover {
+            background-color: var(--purple);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 6px 12px rgba(150, 120, 220, 0.2);
+            border-left: 8px solid var(--pink);
+            transition: transform 0.3s;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--purple);
+            font-size: 2.2rem;
+            margin-top: 0;
+            border-bottom: 3px dotted var(--light-pink);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .bubble {
+            background: radial-gradient(circle, var(--pink), var(--purple));
+            color: white;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto;
+            font-weight: bold;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            background-color: var(--white);
+            margin: 0.8rem 0;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        li::before {
+            content: "🎀";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .chat-bubble {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: radial-gradient(circle, var(--pink), var(--purple));
+            color: white;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            font-size: 1.8rem;
+            z-index: 99;
+            transition: all 0.3s;
+        }
+        
+        .chat-bubble:hover {
+            transform: scale(1.1) rotate(15deg);
+        }
+        
+        /* Project cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-color: var(--light-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--purple);
+            font-size: 3rem;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aisha's World</h1>
+        <p class="tagline">Where cute meets creative and conversations never end!</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">My Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Chatty Blog</a>
+        <a href="#contact">Let's Talk!</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Sweet Aisha</h2>
+            <p>Hello there! I'm Aisha, your favorite bubbly and talkative creative soul! I love all things purple and pink, long conversations about everything and nothing, and spreading positivity wherever I go. When I'm not chatting with friends, you can find me creating beautiful designs, writing fun stories, or dancing to my favorite tunes!</p>
+            
+            <div class="bubble">Chatterbox Extraordinaire!</div>
+        </section>
+        
+        <section id="skills">
+            <h2>My Sparkly Skills</h2>
+            <p>I may love to talk, but I've got the skills to back it up! Here's what I'm amazing at:</p>
+            <ul>
+                <li>Creative Design (with extra cuteness)</li>
+                <li>Writing Stories That Never End (just like my conversations)</li>
+                <li>Making Friends Within 5 Minutes</li>
+                <li>Finding the Perfect Purple Hue</li>
+                <li>Turning Any Moment Into a Fun Memory</li>
+                <li>Baking the Most Adorable Cupcakes</li>
+                <li>Creating Playlists for Every Mood</li>
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>My Fabulous Projects</h2>
+            <p>Check out some of my creative adventures!</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Purple Dream Designs</h3>
+                        <p>A collection of my most beautiful purple-themed creations that will make your heart flutter!</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Endless Stories</h3>
+                        <p>My never-ending story series where characters chat as much as I do!</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Friendship Bracelets</h3>
+                        <p>Handmade bracelets for every new friend I make (that's a lot of bracelets!)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="blog">
+            <h2>Chatty Blog</h2>
+            <p>Welcome to my corner of endless thoughts and conversations!</p>
+            <div class="bubble">New Post Coming Soon!</div>
+        </section>
+        
+        <section id="contact">
+            <h2>Let's Talk!</h2>
+            <p>I'd love to hear from you! Send me a message and let's start a wonderful conversation that might never end!</p>
+            <div class="bubble">💌 Email Me!</div>
+        </section>
+    </div>
+    
+    <div class="chat-bubble">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>Let's be friends forever! Aisha loves you all! 💜</p>
+        <p><small>© 2023 Aisha's Wonderful World. All rights reserved.</small></p>
+    </footer>
+    
+    <script>
+        // Simple animation for chat bubble
+        const chatBubble = document.querySelector('.chat-bubble');
+        
+        chatBubble.addEventListener('click', function() {
+            alert("Hi there! Let's chat! 💜\n\n(This would open a real chat in a full implementation)");
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add a fun effect to the header on load
+        window.addEventListener('load', function() {
+            const header = document.querySelector('header');
+            header.style.animation = 'none';
+            header.offsetHeight; /* trigger reflow */
+            header.style.animation = null;
+        });
+    </script>
+</body>
+</html>

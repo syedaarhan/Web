@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakul | The Best Friend & Businessman</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        
+        header {
+            background-color: #000000;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #808080;
+        }
+        
+        h1 {
+            color: #FFFFFF;
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #808080;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            background-color: #FFFFFF;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #000000;
+        }
+        
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #000000;
+        }
+        
+        .dark-section {
+            background-color: #000000;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+        
+        .mood-meter {
+            width: 100%;
+            height: 20px;
+            background-color: #E0E0E0;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .mood-level {
+            height: 100%;
+            width: 50%; /* Nakul’s mood swings between happy and angry 😆 */
+            background: linear-gradient(90deg, #808080, #000000);
+            border-radius: 10px;
+            animation: mood-swing 3s infinite alternate;
+        }
+        
+        @keyframes mood-swing {
+            0% { width: 30%; background-color: #808080; } /* Calm */
+            50% { width: 70%; background-color: #FF0000; } /* Angry */
+            100% { width: 30%; background-color: #808080; } /* Back to calm */
+        }
+        
+        .tear-drop {
+            display: inline-block;
+            font-size: 1.5rem;
+            animation: cry 2s infinite;
+        }
+        
+        @keyframes cry {
+            0% { opacity: 0; transform: translateY(-10px); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(10px); }
+        }
+        
+        footer {
+            background-color: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 3px solid #808080;
+        }
+        
+        .social-icons a {
+            color: #FFFFFF;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #808080;
+        }
+        
+        .mood-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000000;
+            color: #FFFFFF;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NAKUL</h1>
+        <p class="tagline">Businessman • Best Friend • Emotional Soul</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#business">My Business</a>
+        <a href="#personality">My Moods</a>
+        <a href="#friendship">Why I'm a Great Friend</a>
+        <a href="#contact">Let's Talk</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Who is Nakul?</h2>
+            <p>I’m Nakul—your loyal best friend, a sharp businessman, and a big softie at heart. I might look tough in meetings, but I cry at emotional movies, get angry fast (then feel bad about it), and will always have your back no matter what. Oh, and yes, I’m a little chubby—deal with it. 😊</p>
+        </section>
+        
+        <section id="business" class="section dark-section">
+            <h2>Business & Deals</h2>
+            <p>When I’m not being emotional, I’m closing deals like a boss. My business skills are top-notch, but my heart is even bigger. Here’s what I bring to the table:</p>
+            <ul>
+                <li>📈 Expert negotiator (unless you make me cry)</li>
+                <li>💼 Trusted dealer in my field</li>
+                <li>🤝 Loyalty matters more than profit</li>
+                <li>😤 Gets angry during stressful deals… but cools down fast</li>
+            </ul>
+        </section>
+        
+        <section id="personality" class="section">
+            <h2>My Emotional Side <span class="tear-drop">😢</span></h2>
+            <p>Let’s be real—I’m a mix of toughness and tenderness. One minute I’m giving a killer business pitch, the next minute I’m tearing up at a sad song. My friends know this about me:</p>
+            <ul>
+                <li>😡 Quick to anger, but quicker to forgive</li>
+                <li>😭 Cries easily (happy or sad tears, no shame)</li>
+                <li>🤗 The most supportive friend you’ll ever have</li>
+                <li>🍕 Loves food (hence the chubby cheeks)</li>
+            </ul>
+            
+            <div class="mood-meter">
+                <div class="mood-level"></div>
+            </div>
+            <p><em>Current Mood: 50% Calm, 50% "Don’t Mess With Me"</em></p>
+        </section>
+        
+        <section id="friendship" class="section dark-section">
+            <h2>Why I'm the Best Friend</h2>
+            <p>I might be moody, but my loyalty is unmatched. Here’s why you’ll love having me as a friend:</p>
+            <ul>
+                <li>❤️ Will drop everything to help you</li>
+                <li>😤 Might yell if you do something stupid… but then hug you after</li>
+                <li>🤝 Always honest, even if it hurts</li>
+                <li>🎉 The life of the party (until I get emotional)</li>
+            </ul>
+        </section>
+    </div>
+    
+    <div class="mood-button" title="Check Nakul’s Current Mood">😤</div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#">📱</a>
+            <a href="#">💼</a>
+            <a href="#">🤝</a>
+            <a href="#">❤️</a>
+        </div>
+        <p>© 2024 Nakul | Businessman & Best Friend</p>
+        <p><em>"I might cry or get mad, but I’ll always be there for you."</em></p>
+    </footer>
+</body>
+</html>

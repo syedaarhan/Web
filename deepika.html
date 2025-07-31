@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepika | The Phantom of Jain College</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #000000, #333333);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #FFD700;
+        }
+        
+        h1 {
+            color: #FFD700;
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #D4AF37;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            background-color: #333333;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+        }
+        
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #FFD700;
+            color: #000000;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            background-color: #111111;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.1);
+            border-left: 5px solid #FFD700;
+        }
+        
+        .ghost-icon {
+            text-align: center;
+            font-size: 3rem;
+            margin: 1rem 0;
+            color: #FFD700;
+        }
+        
+        .anger-meter {
+            width: 100%;
+            height: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .anger-level {
+            height: 100%;
+            width: 70%; /* Adjust based on Deepika’s usual anger level 😆 */
+            background: linear-gradient(90deg, #FFD700, #FF4500);
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #000000, #333333);
+            color: #FFD700;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 3px solid #FFD700;
+        }
+        
+        .social-icons a {
+            color: #FFD700;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #FFFFFF;
+            transform: scale(1.2);
+        }
+        
+        .ghost-mode {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFD700;
+            color: #000000;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DEEPIKA</h1>
+        <p class="tagline">The Phantom of Jain College | Smart, Mysterious, and Occasionally Angry</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#college-life">College Life</a>
+        <a href="#skills">Skills</a>
+        <a href="#friends">Friends Zone</a>
+        <a href="#contact">Find Me (If You Can)</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Who is Deepika?</h2>
+            <p>I'm the girl you’ve probably seen disappearing around corners at Jain College. Smart, mysterious, and with a temper that flares up faster than you can say "assignment deadline." I rule the college corridors like a ghost—appearing when least expected and vanishing before you can ask, "Where did she go?"</p>
+            
+            <div class="ghost-icon">👻</div>
+        </section>
+        
+        <section id="college-life" class="section">
+            <h2>Life at Jain College</h2>
+            <p>I roam the halls like a legend. Professors know me, friends adore me, and enemies (if any) fear my wrath. You might find me:</p>
+            <ul>
+                <li>Debating fiercely in class discussions</li>
+                <li>Disappearing from one place and reappearing in another</li>
+                <li>Giving the death stare when annoyed (which happens often)</li>
+                <li>Being the unofficial queen of the college library</li>
+            </ul>
+            
+            <div class="anger-meter">
+                <div class="anger-level"></div>
+            </div>
+            <p><em>Current Anger Level: 70% (Handle with care.)</em></p>
+        </section>
+        
+        <section id="skills" class="section">
+            <h2>What I'm Good At</h2>
+            <p>Besides ghosting people and sudden outbursts, I actually have skills:</p>
+            <ul>
+                <li>🔥 Top-tier academic performance</li>
+                <li>👑 Leading group projects (or scaring slackers into submission)</li>
+                <li>📚 Mastering subjects like a boss</li>
+                <li>👻 Vanishing when someone asks for notes</li>
+            </ul>
+        </section>
+    </div>
+    
+    <div class="ghost-mode" title="Activate Ghost Mode">👻</div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#">📱</a>
+            <a href="#">📚</a>
+            <a href="#">👥</a>
+            <a href="#">💀</a>
+        </div>
+        <p>© 2024 Deepika | Jain College’s Resident Phantom</p>
+        <p><em>"Find me if you can. Or wait until I find you."</em></p>
+    </footer>
+</body>
+</html>
